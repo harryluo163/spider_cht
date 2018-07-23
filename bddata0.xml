@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<bddatalist>
+  <bddata id="1" spiderTime="2018-17-06 05" spiderIP="10.10.10.9" spiderUser="JMADB01026" spiderMAC="00:15:00:EF:0D:F3" phone="13828000715" isUse="88元4G飞享套餐" issm="已审核" gcar="4G TD-LTE 128K USIM卡（现场写卡、2FF/3FF/4FF三切）">
+  </bddata>
+  <bddata id="1" spiderTime="2018-19-06 16" spiderIP="10.10.10.9" spiderUser="JMADB01026" spiderMAC="00:15:00:EF:0D:F3" phone="13433896166" isUse="138元4G飞享套餐（国内不限量版）" issm="已登记" gcar="4G TD-LTE 128K USIM卡（现场写卡、2FF/4FF双切）">
+  </bddata>
+  <bddata id="1" spiderTime="2018-07-06 11:35:32" spiderIP="10.10.10.9" spiderUser="JMADB01026" spiderMAC="00:15:00:EF:0D:F3" phone="13433896166" isUse="138元4G飞享套餐（国内不限量版）" issm="已审核" gcar="4G TD-LTE 128K USIM卡（现场写卡、2FF/4FF双切）" yhhd=",">
+  </bddata>
+  <bddata id="2" spiderTime="2018-07-06 11:36:08" spiderIP="10.10.10.9" spiderUser="JMADB12994c" spiderMAC="00:15:00:EF:0D:F3" phone="13828000715" isUse="88元4G飞享套餐" issm="已审核" gcar="4G TD-LTE 128K USIM卡（现场写卡、2FF/3FF/4FF三切）" yhhd="">
+  </bddata>
+</bddatalist>
