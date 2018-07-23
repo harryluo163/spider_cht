@@ -156,8 +156,12 @@ namespace SpiderApp
                     string content2 = httpClient.GetResponse("", nexurl, "", "");
                     string _datastr = "";
                     //创建文件夹
-
+                    FileStream fs;
                     string Path = "down\\货源数据.txt";
+                    if (!File.Exists(Path))
+                    {
+                        using (new FileStream(Path, FileMode.Create, FileAccess.Write)) { };
+                    }
 
                     using (StreamWriter sw = new StreamWriter(Path, true, Encoding.Default))
                     {
@@ -209,6 +213,12 @@ namespace SpiderApp
             //创建文件夹
 
             string Path = "down\\船源数据.txt";
+            if (!File.Exists(Path))
+            {
+                using (new FileStream(Path, FileMode.Create, FileAccess.Write)) { } ;
+            }
+
+
             RegFunc rf = new RegFunc();
             using (StreamWriter sw = new StreamWriter(Path, true, Encoding.Default))
             {
@@ -227,7 +237,7 @@ namespace SpiderApp
                 _datastr += "<zhrq2>" + rf.GetStr(content2, "\"zhrq2\":\"", "\",") + "</zhrq2>";
                 _datastr += "<bzlb>" + rf.GetStr(content2, "\"bzlb\":\"", "\",") + "</bzlb>";
                 _datastr += "<name>" + rf.GetStr(content2, "\"name\":\"", "\"") + "</name>";
-                _datastr += "<mobile>" + rf.GetStr(content2, "\"cplx\":\"", "\",") + "</mobile>";
+                _datastr += "<mobile>" + rf.GetStr(content2, "\"mobile\":\"", "\",") + "</mobile>";
                 //开始写入
                 sw.Write(_datastr + "\r\n");
                 spidercyNum++;
