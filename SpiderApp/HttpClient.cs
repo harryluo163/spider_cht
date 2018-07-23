@@ -20,7 +20,7 @@ namespace SpiderApp
         private string _userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36";
         private string _acceptLanguage = "zh-CN,zh;q=0.8";
         private string _accept = "text/html, application/xhtml+xml, */*";
-        private string _acceptEncoding = "gzip, deflate";
+        private string _acceptEncoding = "gzip";
         private string _charset = "utf-8";
 
         public string UserAgent { set { ChangeHeaders("User-Agent", value); } }

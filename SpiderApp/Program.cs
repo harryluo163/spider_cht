@@ -16,7 +16,7 @@ namespace SpiderApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Spider());
+            Application.Run(new 船源货源抓取系统());
         }
     }
 }

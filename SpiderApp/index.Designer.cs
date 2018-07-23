@@ -44,9 +44,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(42, 34);
+            this.label8.Location = new System.Drawing.Point(32, 27);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 15);
+            this.label8.Size = new System.Drawing.Size(53, 12);
             this.label8.TabIndex = 29;
             this.label8.Text = "数据源：";
             // 
@@ -57,18 +58,18 @@
             "全部",
             "船源",
             "货源"});
-            this.url_comb.Location = new System.Drawing.Point(116, 26);
-            this.url_comb.Margin = new System.Windows.Forms.Padding(4);
+            this.url_comb.Location = new System.Drawing.Point(87, 21);
             this.url_comb.Name = "url_comb";
-            this.url_comb.Size = new System.Drawing.Size(58, 23);
+            this.url_comb.Size = new System.Drawing.Size(44, 20);
             this.url_comb.TabIndex = 28;
+            this.url_comb.Text = "全部";
             // 
             // spidertime
             // 
-            this.spidertime.Location = new System.Drawing.Point(299, 24);
-            this.spidertime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.spidertime.Location = new System.Drawing.Point(224, 19);
+            this.spidertime.Margin = new System.Windows.Forms.Padding(2);
             this.spidertime.Name = "spidertime";
-            this.spidertime.Size = new System.Drawing.Size(46, 25);
+            this.spidertime.Size = new System.Drawing.Size(34, 21);
             this.spidertime.TabIndex = 31;
             this.spidertime.Value = new decimal(new int[] {
             20,
@@ -79,44 +80,46 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(181, 27);
+            this.label2.Location = new System.Drawing.Point(136, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 15);
+            this.label2.Size = new System.Drawing.Size(89, 12);
             this.label2.TabIndex = 30;
             this.label2.Text = "抓取间隔时间：";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(534, 32);
+            this.label1.Location = new System.Drawing.Point(400, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 15);
+            this.label1.Size = new System.Drawing.Size(0, 12);
             this.label1.TabIndex = 32;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(356, 27);
+            this.label3.Location = new System.Drawing.Point(267, 22);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 15);
+            this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 34;
             this.label3.Text = "账号：";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(415, 23);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(311, 18);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(119, 23);
+            this.comboBox1.Size = new System.Drawing.Size(90, 20);
             this.comboBox1.TabIndex = 33;
             // 
             // btnstart
             // 
-            this.btnstart.Location = new System.Drawing.Point(572, 23);
-            this.btnstart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnstart.Location = new System.Drawing.Point(429, 18);
+            this.btnstart.Margin = new System.Windows.Forms.Padding(2);
             this.btnstart.Name = "btnstart";
-            this.btnstart.Size = new System.Drawing.Size(91, 47);
+            this.btnstart.Size = new System.Drawing.Size(68, 38);
             this.btnstart.TabIndex = 35;
             this.btnstart.Text = "开始";
             this.btnstart.UseVisualStyleBackColor = true;
@@ -125,9 +128,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 74);
+            this.label5.Location = new System.Drawing.Point(20, 59);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 15);
+            this.label5.Size = new System.Drawing.Size(65, 12);
             this.label5.TabIndex = 39;
             this.label5.Text = "日志记录：";
             // 
@@ -137,19 +141,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtview.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtview.Location = new System.Drawing.Point(30, 93);
-            this.txtview.Margin = new System.Windows.Forms.Padding(4);
+            this.txtview.Location = new System.Drawing.Point(22, 74);
             this.txtview.Multiline = true;
             this.txtview.Name = "txtview";
             this.txtview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtview.Size = new System.Drawing.Size(722, 412);
+            this.txtview.Size = new System.Drawing.Size(542, 330);
             this.txtview.TabIndex = 38;
             // 
             // 船源货源抓取系统
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 545);
+            this.ClientSize = new System.Drawing.Size(586, 436);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtview);
             this.Controls.Add(this.btnstart);
@@ -160,8 +163,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.url_comb);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "船源货源抓取系统";
             this.Text = "船源货源抓取系统";
+            this.Load += new System.EventHandler(this.船源货源抓取系统_Load);
             ((System.ComponentModel.ISupportInitialize)(this.spidertime)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
