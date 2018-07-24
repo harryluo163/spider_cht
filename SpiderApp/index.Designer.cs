@@ -40,14 +40,24 @@
             this.txtview = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Nspidernum = new System.Windows.Forms.NumericUpDown();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtHost = new System.Windows.Forms.TextBox();
+            this.Port = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.useproxy = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.spidertime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nspidernum)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 27);
+            this.label8.Location = new System.Drawing.Point(34, 26);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 12);
@@ -61,7 +71,7 @@
             "全部",
             "船源",
             "货源"});
-            this.url_comb.Location = new System.Drawing.Point(87, 21);
+            this.url_comb.Location = new System.Drawing.Point(89, 20);
             this.url_comb.Name = "url_comb";
             this.url_comb.Size = new System.Drawing.Size(44, 20);
             this.url_comb.TabIndex = 28;
@@ -69,7 +79,7 @@
             // 
             // spidertime
             // 
-            this.spidertime.Location = new System.Drawing.Point(224, 19);
+            this.spidertime.Location = new System.Drawing.Point(226, 18);
             this.spidertime.Margin = new System.Windows.Forms.Padding(2);
             this.spidertime.Minimum = new decimal(new int[] {
             10,
@@ -88,7 +98,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(136, 22);
+            this.label2.Location = new System.Drawing.Point(138, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 12);
@@ -98,7 +108,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(400, 26);
+            this.label1.Location = new System.Drawing.Point(402, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 12);
@@ -107,7 +117,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(267, 22);
+            this.label3.Location = new System.Drawing.Point(269, 21);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 12);
@@ -117,14 +127,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(311, 18);
+            this.comboBox1.Location = new System.Drawing.Point(313, 17);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(90, 20);
             this.comboBox1.TabIndex = 33;
             // 
             // btnstart
             // 
-            this.btnstart.Location = new System.Drawing.Point(429, 18);
+            this.btnstart.Location = new System.Drawing.Point(431, 17);
             this.btnstart.Margin = new System.Windows.Forms.Padding(2);
             this.btnstart.Name = "btnstart";
             this.btnstart.Size = new System.Drawing.Size(68, 38);
@@ -136,7 +146,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 75);
+            this.label5.Location = new System.Drawing.Point(20, 215);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 12);
@@ -149,17 +159,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtview.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtview.Location = new System.Drawing.Point(22, 100);
+            this.txtview.Location = new System.Drawing.Point(22, 230);
             this.txtview.Multiline = true;
             this.txtview.Name = "txtview";
             this.txtview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtview.Size = new System.Drawing.Size(542, 378);
+            this.txtview.Size = new System.Drawing.Size(624, 368);
             this.txtview.TabIndex = 38;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 51);
+            this.label4.Location = new System.Drawing.Point(22, 50);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 12);
@@ -168,7 +178,7 @@
             // 
             // Nspidernum
             // 
-            this.Nspidernum.Location = new System.Drawing.Point(89, 46);
+            this.Nspidernum.Location = new System.Drawing.Point(91, 45);
             this.Nspidernum.Margin = new System.Windows.Forms.Padding(2);
             this.Nspidernum.Maximum = new decimal(new int[] {
             500,
@@ -189,29 +199,113 @@
             0,
             0});
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.useproxy);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.Port);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtHost);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Location = new System.Drawing.Point(34, 107);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(569, 77);
+            this.groupBox1.TabIndex = 42;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "代理设置";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 27);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "代理IP：";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.url_comb);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.Nspidernum);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.spidertime);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.btnstart);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(34, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(569, 89);
+            this.groupBox2.TabIndex = 43;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "基本设置";
+            // 
+            // txtHost
+            // 
+            this.txtHost.Location = new System.Drawing.Point(65, 20);
+            this.txtHost.Name = "txtHost";
+            this.txtHost.Size = new System.Drawing.Size(123, 21);
+            this.txtHost.TabIndex = 31;
+            // 
+            // Port
+            // 
+            this.Port.Location = new System.Drawing.Point(239, 20);
+            this.Port.Name = "Port";
+            this.Port.Size = new System.Drawing.Size(39, 21);
+            this.Port.TabIndex = 33;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(193, 27);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 12);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "端口：";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(295, 27);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 12);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "使用代理：";
+            // 
+            // useproxy
+            // 
+            this.useproxy.AutoSize = true;
+            this.useproxy.Location = new System.Drawing.Point(365, 27);
+            this.useproxy.Name = "useproxy";
+            this.useproxy.Size = new System.Drawing.Size(48, 16);
+            this.useproxy.TabIndex = 35;
+            this.useproxy.Text = "使用";
+            this.useproxy.UseVisualStyleBackColor = true;
+            // 
             // 船源货源抓取系统
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 510);
-            this.Controls.Add(this.Nspidernum);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(668, 630);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtview);
-            this.Controls.Add(this.btnstart);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.spidertime);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.url_comb);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "船源货源抓取系统";
             this.Text = "船源货源抓取系统";
             this.Load += new System.EventHandler(this.船源货源抓取系统_Load);
             ((System.ComponentModel.ISupportInitialize)(this.spidertime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nspidernum)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +325,13 @@
         private System.Windows.Forms.TextBox txtview;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown Nspidernum;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox useproxy;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Port;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtHost;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

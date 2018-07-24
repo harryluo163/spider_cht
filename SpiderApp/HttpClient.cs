@@ -40,17 +40,30 @@ namespace SpiderApp
             _client.DefaultRequestHeaders.Add(name, newHeaders);
         }
 
-        public HttpClient()
+        public HttpClient(string Host,int Port, Boolean useproxy)
         {
             ContentType = "application/x-www-form-urlencoded";
-            handler = new HttpClientHandler()
+            if (useproxy)
             {
-                UseCookies = true,
-                AllowAutoRedirect = true,
-                AutomaticDecompression = DecompressionMethods.GZip, //设置自动解压
-                UseProxy = true,
-                Proxy = new WebProxy("218.22.102.107", 80)
-            };
+                handler = new HttpClientHandler()
+                {
+                    UseCookies = true,
+                    AllowAutoRedirect = true,
+                    AutomaticDecompression = DecompressionMethods.GZip, //设置自动解压
+                    UseProxy = useproxy,
+                    Proxy = new WebProxy(Host, Port)
+                };
+            }
+            else {
+                handler = new HttpClientHandler()
+                {
+                    UseCookies = true,
+                    AllowAutoRedirect = true,
+                    AutomaticDecompression = DecompressionMethods.GZip, //设置自动解压
+                  
+                };
+            }
+         
             _client = new System.Net.Http.HttpClient(handler);
             _client.DefaultRequestHeaders.Add("Accept", _accept);
             _client.DefaultRequestHeaders.Add("Accept-Language", _acceptLanguage);
@@ -127,16 +140,16 @@ namespace SpiderApp
                 {
                     try
                     {
-                        CookieCollection cookieCollection = handler.CookieContainer.GetCookies(uri);
-                        var list = new List<string>();
-                        if (cookieCollection.Count > 0)
-                        {
-                            for (int i = 0; i < cookieCollection.Count; i++)
-                            {
-                                list.Add(cookieCollection[i].Name + "=" + cookieCollection[i].Value + "=" + cookieCollection[i].Domain);
-                            }
-                            Cookie = string.Join("|", list);
-                        }
+                        //CookieCollection cookieCollection = handler.CookieContainer.GetCookies(uri);
+                        //var list = new List<string>();
+                        //if (cookieCollection.Count > 0)
+                        //{
+                        //    for (int i = 0; i < cookieCollection.Count; i++)
+                        //    {
+                        //        list.Add(cookieCollection[i].Name + "=" + cookieCollection[i].Value + "=" + cookieCollection[i].Domain);
+                        //    }
+                        //    Cookie = string.Join("|", list);
+                        //}
                     }
                     catch (Exception ex)
                     {
