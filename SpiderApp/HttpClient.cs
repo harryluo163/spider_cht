@@ -47,9 +47,9 @@ namespace SpiderApp
             {
                 UseCookies = true,
                 AllowAutoRedirect = true,
-                AutomaticDecompression = DecompressionMethods.GZip //设置自动解压
-                //UseProxy = true,
-                //Proxy = new WebProxy("218.64.147.211", 9000)
+                AutomaticDecompression = DecompressionMethods.GZip, //设置自动解压
+                UseProxy = true,
+                Proxy = new WebProxy("218.22.102.107", 80)
             };
             _client = new System.Net.Http.HttpClient(handler);
             _client.DefaultRequestHeaders.Add("Accept", _accept);

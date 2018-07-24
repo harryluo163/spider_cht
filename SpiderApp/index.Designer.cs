@@ -38,7 +38,10 @@
             this.btnstart = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtview = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Nspidernum = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.spidertime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Nspidernum)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -68,6 +71,11 @@
             // 
             this.spidertime.Location = new System.Drawing.Point(224, 19);
             this.spidertime.Margin = new System.Windows.Forms.Padding(2);
+            this.spidertime.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.spidertime.Name = "spidertime";
             this.spidertime.Size = new System.Drawing.Size(34, 21);
             this.spidertime.TabIndex = 31;
@@ -128,7 +136,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 59);
+            this.label5.Location = new System.Drawing.Point(20, 75);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 12);
@@ -141,18 +149,53 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtview.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtview.Location = new System.Drawing.Point(22, 74);
+            this.txtview.Location = new System.Drawing.Point(22, 100);
             this.txtview.Multiline = true;
             this.txtview.Name = "txtview";
             this.txtview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtview.Size = new System.Drawing.Size(542, 330);
+            this.txtview.Size = new System.Drawing.Size(542, 378);
             this.txtview.TabIndex = 38;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 51);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 12);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "抓取页数：";
+            // 
+            // Nspidernum
+            // 
+            this.Nspidernum.Location = new System.Drawing.Point(89, 46);
+            this.Nspidernum.Margin = new System.Windows.Forms.Padding(2);
+            this.Nspidernum.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.Nspidernum.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Nspidernum.Name = "Nspidernum";
+            this.Nspidernum.Size = new System.Drawing.Size(34, 21);
+            this.Nspidernum.TabIndex = 41;
+            this.Nspidernum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // 船源货源抓取系统
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 436);
+            this.ClientSize = new System.Drawing.Size(586, 510);
+            this.Controls.Add(this.Nspidernum);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtview);
             this.Controls.Add(this.btnstart);
@@ -168,6 +211,7 @@
             this.Text = "船源货源抓取系统";
             this.Load += new System.EventHandler(this.船源货源抓取系统_Load);
             ((System.ComponentModel.ISupportInitialize)(this.spidertime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Nspidernum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +229,7 @@
         private System.Windows.Forms.Button btnstart;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtview;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown Nspidernum;
     }
 }
