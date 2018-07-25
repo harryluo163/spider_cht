@@ -81,6 +81,11 @@
             // 
             this.spidertime.Location = new System.Drawing.Point(226, 18);
             this.spidertime.Margin = new System.Windows.Forms.Padding(2);
+            this.spidertime.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.spidertime.Minimum = new decimal(new int[] {
             10,
             0,
@@ -90,7 +95,7 @@
             this.spidertime.Size = new System.Drawing.Size(34, 21);
             this.spidertime.TabIndex = 31;
             this.spidertime.Value = new decimal(new int[] {
-            20,
+            60,
             0,
             0,
             0});
@@ -249,6 +254,7 @@
             this.txtHost.Name = "txtHost";
             this.txtHost.Size = new System.Drawing.Size(123, 21);
             this.txtHost.TabIndex = 31;
+            this.txtHost.Text = "218.22.102.107";
             // 
             // Port
             // 
@@ -256,6 +262,7 @@
             this.Port.Name = "Port";
             this.Port.Size = new System.Drawing.Size(39, 21);
             this.Port.TabIndex = 33;
+            this.Port.Text = "80";
             // 
             // label7
             // 
@@ -280,6 +287,8 @@
             // useproxy
             // 
             this.useproxy.AutoSize = true;
+            this.useproxy.Checked = true;
+            this.useproxy.CheckState = System.Windows.Forms.CheckState.Checked;
             this.useproxy.Location = new System.Drawing.Point(365, 27);
             this.useproxy.Name = "useproxy";
             this.useproxy.Size = new System.Drawing.Size(48, 16);
