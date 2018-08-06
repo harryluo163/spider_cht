@@ -97,6 +97,7 @@
   <ItemGroup>
     <Compile Include="entity\bddata.cs" />
     <Compile Include="entity\DownloadFileInfo.cs" />
+    <Compile Include="entity\ip.cs" />
     <Compile Include="entity\phone.cs" />
     <Compile Include="entity\user.cs" />
     <Compile Include="HttpClient.cs" />
@@ -157,6 +158,9 @@
     <Folder Include="file\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="entity\ip.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="entity\user.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
