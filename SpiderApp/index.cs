@@ -186,9 +186,11 @@ namespace SpiderApp
                 for (int i = 1; i <= Nspidernum.Value; i++)
                 {
                     string content = httpClient.GetResponse("", "http://cht.cjsyw.com:8080/ShipSource/listSS.aspx?pageno=" + i + "&&", "", "");
+               
                     //Thread.Sleep(Convert.ToInt32(spidertime.Value) * 1000);
                     if (!string.IsNullOrEmpty(content))
                     {
+                        getHttpClient();
                         RegFunc rf = new RegFunc();
                         ArrayList arrayList = rf.GetStrArr(content, "\"id\":", ",");
                         for (int k = 0; k < arrayList.Count; k++)
@@ -204,7 +206,8 @@ namespace SpiderApp
                     }
                     else
                     {
-                        txtview.AppendText("更换代理" + Environment.NewLine);
+                        txtview.AppendText("请求异常" + Environment.NewLine);
+                        getHttpClient();
                         btnstart.Enabled = true;
                         return;
                     }
@@ -231,6 +234,7 @@ namespace SpiderApp
                 for (int i = 1; i <= Nspidernum.Value; i++)
                 {
                     string content = httpClient.GetResponse("", "http://cht.cjsyw.com:8080/Goods/listGoods.aspx?pageno=" + i + "&&", "", "");
+                    getHttpClient();
                     if (!string.IsNullOrEmpty(content))
                     {
                         Thread.Sleep(Convert.ToInt32(4000));
@@ -249,7 +253,7 @@ namespace SpiderApp
                     else
                     {
 
-                        txtview.AppendText("更换代理" + Environment.NewLine);
+                        txtview.AppendText("请求异常" + Environment.NewLine);
                         btnstart.Enabled = true;
                         return;
                     }
@@ -274,6 +278,7 @@ namespace SpiderApp
                 for (int i = 1; i <= nmccda.Value; i++)
                 {
                     string content = httpClient.GetResponse("", "http://cht.cjsyw.com:8080/Boat/BoatList.aspx?pageno=" + i + "&&", "", "");
+                    getHttpClient();
                     if (!string.IsNullOrEmpty(content))
                     {
                         Thread.Sleep(Convert.ToInt32(4000));
@@ -292,7 +297,7 @@ namespace SpiderApp
                     else
                     {
 
-                        txtview.AppendText("更换代理" + Environment.NewLine);
+                        txtview.AppendText("请求异常" + Environment.NewLine);
                         btnstart.Enabled = true;
                         return;
                     }
@@ -314,6 +319,7 @@ namespace SpiderApp
                 user user = getuser();
                 string nexurl = "http://cht.cjsyw.com:8080/ShipSource/getSSDetail.aspx?userid=" + user.token + "&kcid=" + kcid + "";
                 string content2 = httpClient.GetResponse("", nexurl, "", "");
+                getHttpClient();
                 if (rf.GetStr(content2, "\"mobile\":\"", "\",") == "操作频繁稍后再试！")
                 {
                     txtview.AppendText("操作频繁切换用户" + user.token + Environment.NewLine);
@@ -426,6 +432,7 @@ namespace SpiderApp
                 user user = getuser();
                 string nexurl = "http://cht.cjsyw.com:8080//Goods/FindGoodsDetails.aspx?userid=" + user.token + "&hwid=" + hwid + "";
                 string content2 = httpClient.GetResponse("", nexurl, "", "");
+                getHttpClient();
                 if (rf.GetStr(content2, "\"mobile\":\"", "\",") == "操作频繁稍后再试！")
                 {
                     txtview.AppendText("操作频繁切换用户" + user.token + Environment.NewLine);
@@ -499,6 +506,7 @@ namespace SpiderApp
                 user user = getuser();
                 string nexurl = "http://cht.cjsyw.com:8080/Boat/getBoatById.aspx?userid=" + user.token + "&id=" + hwid + "";
                 string content2 = httpClient.GetResponse("", nexurl, "", "");
+                getHttpClient();
                 if (rf.GetStr(content2, "\"mobile\":\"", "\",") == "操作频繁稍后再试！")
                 {
                     txtview.AppendText("操作频繁切换用户" + user.token + Environment.NewLine);
@@ -625,6 +633,27 @@ namespace SpiderApp
                 }
             }
             return ip;
+        }
+
+        public void getHttpClient()
+        {
+                 if (useproxy.Checked)
+            {
+
+                if (IPList.Count<0)
+                {
+                    MessageBox.Show("ip列表为空，请到ip.xml编辑");
+                    return;
+                }
+                _IP iP = getip();
+                txtview.AppendText("切换代理" + iP.ip+ "" + Environment.NewLine);
+
+                httpClient = new HttpClient(iP.ip.Split(':')[0].ToString(), Convert.ToInt32(iP.ip.Split(':')[1].ToString()), useproxy.Checked);
+            }
+            else
+            {
+                httpClient = new HttpClient("", 0, useproxy.Checked);
+            }
         }
         private void 船源货源抓取系统_Load(object sender, EventArgs e)
         {
